@@ -16,6 +16,18 @@ function emitResponsive(v: boolean): void {
       const img = document.getElementById('img')
       img?.classList.remove('light-mode-img')
       img?.classList.add('dark-mode-img')
+      const navResp = document.getElementById('nav-mobile')
+      navResp?.classList.remove('light-mode-mb')
+      navResp?.classList.add('dark-mode-mb')
+      const us = document.getElementById('us')
+      us?.classList.remove('item-light')
+      us?.classList.add('item-dark')
+      const home = document.getElementById('home')
+      home?.classList.remove('item-light')
+      home?.classList.add('item-dark')
+      const contact = document.getElementById('contacts')
+      contact?.classList.remove('item-light')
+      contact?.classList.add('item-dark')
     }
     else{
       const body = document.querySelector('body');
@@ -33,6 +45,18 @@ function emitResponsive(v: boolean): void {
       const img = document.getElementById('img')
       img?.classList.remove('dark-mode-img')
       img?.classList.add('light-mode-img')
+      const navResp = document.getElementById('nav-mobile')
+      navResp?.classList.remove('dark-mode-mb')
+      navResp?.classList.add('light-mode-mb')
+      const us = document.getElementById('us')
+      us?.classList.remove('item-dark')
+      us?.classList.add('item-light')
+      const home = document.getElementById('home')
+      home?.classList.remove('item-dark')
+      home?.classList.add('item-light')
+      const contact = document.getElementById('contacts')
+      contact?.classList.remove('item-dark')
+      contact?.classList.add('item-light')
     }
 }
 </script>

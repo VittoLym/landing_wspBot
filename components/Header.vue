@@ -71,7 +71,27 @@ function schemeManagement(v : boolean) {
 .light-mode-img{
   background-color: var(--c-bg-in-white);
 }
-
+.light-mode-mb{
+  background-color:var(--vt-c-white-mute);
+  color:var(--c-bg-t-white);
+}
+.light-mode-mb:hover{
+  background-color: var(--vt-c-white-soft);
+}
+.item-light:hover{
+  background-color: var(--vt-c-white-soft);
+}
+.item-dark:hover{
+  background-color: var(--vt-c-dark-soft);
+}
+.item-light::after{
+  background-color: var(--vt-c-white-mute);
+  color: var(--c-bg-t-white);
+}
+.item-dark::after{
+  background-color: var(--vt-c-dark-mute);
+  color: var(--c-bg-t-dark);
+}
 nav{
   position: fixed;
   z-index: 100;

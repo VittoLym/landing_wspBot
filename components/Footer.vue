@@ -4,16 +4,16 @@ import Home from '/home.svg'
 import Contact from '/contact.svg';
 </script>
 <template>
-  <nav>
+  <nav id="nav-mobile">
     <ul>
-      <NuxtLink to="/About" class="us-link">
+      <NuxtLink to="/About" class="us-link" id="us">
         <img :src="Us" alt="Us">
       </NuxtLink>
-      <NuxtLink to="/" class="home-link">
+      <NuxtLink to="/" class="home-link" id="home">
         <img :src="Home" alt="Home" >
       </NuxtLink>
-      <NuxtLink to="/Contact" class="contact-link">
-        <img :src="Contact" alt="Contact">
+      <NuxtLink to="/Contact" class="contact-link" id="contacts">
+        <img :src="Contact" alt="Contact" id="contact">
       </NuxtLink>
     </ul>
   </nav>
@@ -45,28 +45,6 @@ nav ul a{
   transition: all ease .1s;
   border-radius: .8rem;
 }
-nav ul a:hover{
-  background-color: #242424a1;
-}/* 
-nav ul a::after {
-  content: 'Contact';
-  position: absolute;
-  bottom: 120%;
-  z-index: 120;
-  left: 17%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: .5rem .7rem;
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-nav ul a:active::after {
-  opacity: 1;
-}  */
-
 .us-link::after {
   content: 'Us';
   position: absolute;
@@ -74,8 +52,6 @@ nav ul a:active::after {
   z-index: 120;
   left: 17%;
   transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
   padding: .5rem .7rem;
   border-radius: 5px;
   opacity: 0;
@@ -91,8 +67,6 @@ nav ul a:active::after {
   z-index: 120;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
   padding: .5rem .7rem;
   border-radius: 5px;
   opacity: 0;
@@ -108,8 +82,6 @@ nav ul a:active::after {
   z-index: 120;
   left: 83%;
   transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
   padding: .5rem .7rem;
   border-radius: 5px;
   opacity: 0;

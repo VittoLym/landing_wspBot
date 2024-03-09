@@ -69,6 +69,7 @@ onBeforeUnmount(() => {
 .light-mode{
   background-color:var(--c-bg-white);
 }
+
 body{
     font-family: 'Poppins';
     margin: 0;
