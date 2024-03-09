@@ -1,9 +1,29 @@
 <script setup lang="ts">
+import { onMounted, ref, onBeforeUnmount } from 'vue';
+const isMobile = ref<boolean>(true);
 
+function fixsizing():void {
+  const totalWidth= ref<number>(globalThis.innerWidth);
+  
+  if(totalWidth.value <= 880){
+    isMobile.value = true
+  }
+  else{
+    isMobile.value = false
+  }
+};
+onMounted(() => {
+  fixsizing()
+  window.addEventListener('resize', fixsizing)
+});
+onBeforeUnmount(() => {
+  globalThis.removeEventListener('resize', fixsizing)
+});
 </script>
 <template>
   <NuxtLayout >
-    <Header />
+    <HeaderMobile v-if="isMobile" />
+    <Header v-else />
     <NuxtPage />
   </NuxtLayout>
 </template>
