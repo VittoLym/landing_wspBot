@@ -25,6 +25,7 @@ onBeforeUnmount(() => {
     <HeaderMobile v-if="isMobile" />
     <Header v-else />
     <NuxtPage />
+    <Footer v-if="isMobile"/>
   </NuxtLayout>
 </template>
 <style>
