@@ -28,13 +28,15 @@ function schemeManagement(v : boolean) {
 <template>
   <nav  id="nav">
     <article class="titleNav">
-      <h1 id="h1">Vittbot Whatsapp</h1>
+      <nuxt-link to="/">
+        <h1 id="h1">Vittbot Whatsapp</h1>
+      </nuxt-link>
     </article>
     <article class="navItems">
       <ul>
-        <NuxtLink to="/hot-to-use">How to use</NuxtLink>
+        <a href="#how-to-use">How to use</a>
         <NuxtLink to="/Contact">Contact</NuxtLink>
-        <a href="https://github.com" target="_blank">Github</a>
+        <a href="https://github.com/VittoLym/landing_wspBot" target="_blank">Github</a>
         <NuxtLink to="/About">About</NuxtLink>
       </ul>
       <SwitchMode @test-emit="schemeManagement" />
@@ -60,7 +62,7 @@ nav{
   height: 13vh;
 }
 .titleNav{
-  width: 30%;
+  width: max-content;
   height: 100%;
   color: var(--bg-t);
 }
@@ -70,6 +72,10 @@ nav{
   line-height: 13vh;
   cursor:pointer;
   font-size:1.5rem;
+}
+a{
+  text-decoration:none;
+  color:var(--bg-t)
 }
 .titleNav h1:hover{
   color:var(--c-wsp);

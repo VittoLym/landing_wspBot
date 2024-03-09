@@ -2,28 +2,36 @@
 
 </script>
 <template>
+  <NuxtLayout >
+    <Header />
     <NuxtPage />
+  </NuxtLayout>
 </template>
 <style>
-:root{
+:root{ 
+  scroll-behavior: smooth;
   --c-wsp:#5cb654;
   --c-bg-white:#fbfbfb;
   --c-bg-t-white: #201f1f;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #e5e5e5;
   --v-c-bc-white:#dbdbdb;
+  --c-bg-in-white:#141414dc;
 
   --c-bg-dark:#201f1f;
   --c-bg-t-dark:#fbfbfb;
   --vt-c-dark-soft: #252525;
   --vt-c-dark-mute: #313131;
   --v-c-bc-dark:#313131;
+  --c-bg-in-dark:#f1f5fd1e;
 }
 :root{
+  scroll-behavior: smooth;
   --bg-t:var(--c-bg-t-white);
   --color-background:var(--c-bg-white);
   --color-background-soft:var(--vt-c-white-soft);
-  --color-background-mute:var(--vt-c-white-mute)
+  --color-background-mute:var(--vt-c-white-mute);
+  --color-background-invertido:var(--c-bg-in-white);
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -31,7 +39,7 @@
   --color-background:var(--c-bg-dark);
   --color-background-soft:var(--vt-c-dark-soft);
   --color-background-mute:var(--vt-c-dark-mute);
-  --color-prueba: #ff6860;
+  --color-background-invertido:var(--c-bg-in-dark);
   }
 }
 .dark-mode{
@@ -46,5 +54,6 @@ body{
     background-color: var(--color-background);
     width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 </style>
