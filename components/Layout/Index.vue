@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, onUpdated } from 'vue';
 import Bot from '/bot.svg'
 
 onMounted(()=>{
-  let v = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; 
-  if(v === 'dark'){
+  let v = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const body = document.querySelector('body');
+  const bodycl = body?.classList.value; 
+  console.log(bodycl)
+  if(bodycl === 'dark-mode'){
     const art = document.getElementById('art')
     art?.classList.remove('light-mode-nav')
     art?.classList.add('dark-mode-nav')

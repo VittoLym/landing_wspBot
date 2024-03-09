@@ -1,12 +1,11 @@
+<script lang="ts" setup>
+
+</script>
 <template>
   <main>
     <h1 id="how-to-use">How to use:</h1>
   </main>
 </template>
-
-<script lang="ts" setup>
-
-</script>
 
 <style scoped>
 main{
