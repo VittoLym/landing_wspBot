@@ -22,7 +22,7 @@ import Contact from '/contact.svg';
 <style scoped>
 nav{
   width: 100%;
-  height: 7vh;
+  height: max-content;
   position: fixed;
   bottom: 0;
 }
