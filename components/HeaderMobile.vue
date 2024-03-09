@@ -48,12 +48,16 @@ function emitResponsive(v: boolean): void {
 
 <style scoped>
 nav{
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content:space-between;
   color: var(--bg-t);
 }
 span{
   width: 7%;
+}
+nav h1{
+  margin: 0;
+  line-height:13vh ;
 }
 </style>

@@ -34,16 +34,13 @@ onMounted(()=>{
   </section>
 </template>
 
-<script lang="ts" setup>
-
-</script>
-
 <style scoped>
 #section{
   padding-top: 15vh;
   height:90vh;
   width:100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -78,16 +75,27 @@ article p{
     justify-content: center;
     height: max-content;
   }
+  #section .container-img{
+    height: 40vh;
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #section .container-img img{
+    margin: 0;
+    height: min-content;
+    width: 50vw;
+  }
   article{
     margin-top: 5vh;
     width: 80%;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
   }
   article p{
     font-size: .9rem;
-    width: 45%;
+    width: 100%;
   }
 }
 </style>
